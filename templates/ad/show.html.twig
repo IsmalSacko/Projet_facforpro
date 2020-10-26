@@ -1,0 +1,44 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}ANNONCES{% endblock %}
+
+{% block body %}
+<div class="col-md-6 m-auto py-2">
+    <h1>Annonce n°{{ad.id}}</h1>
+
+    <table class="table" id="myTable">
+        <tbody>
+            <tr class="bg-secondary">
+                <th>Id</th>
+                <td>{{ ad.id }}</td>
+            </tr>
+            <tr class="bg-primary text-info">
+                <th>Title</th>
+                <td>{{ ad.title }}</td>
+            </tr>
+            <tr class="bg-info">
+                <th>Price</th>
+                <td>{{ ad.price }}</td>
+            </tr>
+            <tr class="bg-light">
+                <th>Content</th>
+                <td>{{ ad.content }}</td>
+            </tr>
+            <tr class="bg-warning">
+                <th>Filename</th>
+                <td>{{ ad.filename }}</td>
+            </tr>
+            <tr class="bg-danger">
+                <th>Room</th>
+                <td>{{ ad.room }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <a class="btn btn-secondary text-info"href="{{ path('ad_index') }}">back to list</a>
+
+    <a class="btn btn-secondary text-info" href="{{ path('ad_edit', {'id': ad.id}) }}">edit</a>
+
+   {{ include('ad/_delete_form.html.twig') }}
+</div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends "baseblog.html.twig" %}
+{% block body %}
+{% include "common/entete.html.twig" %}
+ <div class="container">
+ <h1>{% block title %}Nouveau contact{% endblock %}</h1>
+ <p> :{{contact.firstname | raw }}</p>
+ <p> :{{contact.lastname | raw }}</p>
+ <p> :{{contact.phone | raw  }}</p>
+ <p> :{{contact.email | raw }}</p>
+ <p> :{{contact.message | raw }}</p> 
+ </div>
+{% endblock %} 

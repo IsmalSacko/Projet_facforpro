@@ -1,0 +1,12 @@
+easy_admin:
+    entities:
+        Utilisateur:
+            class: App\Entity\Utilisateur
+            controller: App\Controller\UtilisateurControlleur
+
+# easy_admin:
+#    entities:
+#        List the entity class name you want to manage
+#        - App\Entity\Utilisateur
+#        - App\Entity\Aad
+       
