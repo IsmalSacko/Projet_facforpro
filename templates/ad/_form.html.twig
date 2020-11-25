@@ -2,8 +2,8 @@
 <div class="">
 	{{ form_start(form) }}				
 	<div class="row text-center">
-		<div class="col-md-4">{{ form_row(form.content) }}</div>
 		<div class="col-md-4">{{ form_row(form.title) }}</div>
+		<div class="col-md-4">{{ form_row(form.content) }}</div>
 		<div class="col-md-4">{{ form_row(form.price) }}</div>
 	</div>			
 	<div class="row text-center ">
@@ -15,7 +15,7 @@
 	{# <div class="btn btn-primary" id="ajouter">ajouter</div>	 #}
 	{{form_rest(form)}}	
 	<div>
-		<button class="btn btn-success">{{ button|default('Enregister') }}</button>
+		<button class="btn btn-success rounded-pill">{{ button|default('Enregister') }}</button>
 	</div>	
 {{ form_end(form) }}
 </div>

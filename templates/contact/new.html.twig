@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}New Contact{% endblock %}
+
+{% block body %}
+    <div class="container ml-auto col-6 badge-dark mt-1">
+        <h1 class="text-center">Nous conctacter !</h1>
+
+        {{ include('contact/_form.html.twig') }}
+
+        <a class="btn btn-success rounded-pill m-1" href="{{ path('home') }}">Retour à l'accueil</a>
+    </div>
+{% endblock %}

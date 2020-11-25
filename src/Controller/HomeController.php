@@ -26,6 +26,12 @@ class HomeController extends AbstractController
           'titre'  => $titre
         ]);
     }
+    /**
+     * @Route ("/projets_realises", name="projets_realises-index")
+     */
+    public function projet() : Response{
+        return $this->render('home/projet.html.twig');
+    }
 
     /**
      * @Route("/upload", name="upload")

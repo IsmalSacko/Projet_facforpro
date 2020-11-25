@@ -10,8 +10,8 @@
     <h5 class="mt-2 text-center text-info">{{ ad.title }}</h5>
             <div class="card bg-light mb-3">
                 <div class="card-header text-center">
-                    {{ad.room}} Chambre(s) à 
-                    <strong>{{ ad.price }}&euro; /mois</strong>
+                    {{ad.room}} site à
+                    <strong>{{ ad.price }} FCFA</strong>
                     <br>
                     <small>publié le {{ ad.UpdatedAt |date("m/d/Y") }} par {{ ad.utilisateur }}</small>
                     {# Pour afficher une image téléchargée par vich, on peut soit le faire en indicant le chemin de l'image manuellement, 
@@ -21,14 +21,14 @@
 
                     <img style="height: 150px; width: 100%; display: block;" src="{{ vich_uploader_asset(ad, 'imageFile') | imagine_filter('my_thumb') }}" alt="{{ ad.imageFile}}"></img>
                     <div class="card-body">
-                        <p class="card-text">
-                            {{ad.content}}
+                        <p class="card-text text-justify">
+                            {{ad.content | raw}}
                         </p>
                        
                         <a class="btn btn-success" href="{{ path('ad_show', {'id': ad.id}) }}">show</a>
-                        {# {% if app.user %} #}
+                        {% if app.user %}
                         <a class="btn btn-primary" href="{{ path('ad_edit', {'id': ad.id}) }}">edit</a>
-                        {# {% endif %} #}
+                        {% endif %}
                     </div>
                 </div>
             </div> 
