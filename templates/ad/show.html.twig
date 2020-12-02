@@ -3,7 +3,7 @@
 {% block title %}ANNONCES{% endblock %}
 
 {% block body %}
-<div class="col-md-6 m-auto py-2 text-justify">
+<div class="col-md-6 m-auto py-2 text-justify text-light">
     <h1>Annonce n°{{ad.id}}</h1>
 
     <table class="table" id="myTable">
@@ -12,7 +12,7 @@
                 <th>Id</th>
                 <td>{{ ad.id }}</td>
             </tr>
-            <tr class="bg-primary text-info">
+            <tr class="bg-primary text-light">
                 <th>Titre</th>
                 <td>{{ ad.title }}</td>
             </tr>

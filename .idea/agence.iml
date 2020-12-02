@@ -17,5 +17,10 @@
     <orderEntry type="library" name="responsive.dataTables" level="application" />
     <orderEntry type="library" name="dataTables.responsive" level="application" />
     <orderEntry type="library" name="bootstrap" level="application" />
+    <orderEntry type="library" name="jquery.dataTables" level="application" />
+    <orderEntry type="library" name="responsive.dataTables" level="application" />
+    <orderEntry type="library" name="bootstrap" level="application" />
+    <orderEntry type="library" name="popper.js" level="application" />
+    <orderEntry type="library" name="dataTables.responsive" level="application" />
   </component>
 </module>

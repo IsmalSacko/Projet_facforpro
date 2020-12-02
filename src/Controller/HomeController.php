@@ -2,6 +2,8 @@
 
 namespace App\Controller;
 
+use App\Entity\Aad;
+use App\Repository\AadRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
@@ -16,14 +18,18 @@ class HomeController extends AbstractController
             'titre' => 'Bienvenue | Agence',
         ]);
     }
+
     /**
      * @Route("/home", name="home")
+     * @param AadRepository $repository
+     * @return Response
      */
-    public function accueil(){
+    public function accueil(AadRepository $repository){
         $titre ="Bienvenue sur la page de mon Agence de location";
 
         return $this->render('home/index.html.twig', [
-          'titre'  => $titre
+          'titre'  => $titre,
+            'ads' => $repository->findAll()
         ]);
     }
     /**
