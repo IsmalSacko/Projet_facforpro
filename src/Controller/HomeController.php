@@ -45,4 +45,10 @@ class HomeController extends AbstractController
     public function image(){
         return $this->render('upload.html.twig');
     }
+    /**
+     * @Route ("/dev-web", name="dev-wev_index")
+     */
+        public function dev_web(){
+        return $this->render('home/dev_web.html.twig');
+    }
 }
