@@ -84,11 +84,30 @@ body .btn {
         line-height: 1.4;
 
     }
-
-
-
 }
-@media screen and (max-width: 992px){
+
+@media (min-width: 576px) {
+    body{
+
+        width: 100%;
+    }
+}
+@media (min-width: 768px) {
+    body{
+
+        width: 100%;
+    }
+}
+
+@media (min-width: 992px) {
+    body{
+
+        width: 100%;
+    }
+}
+
+
+@media (min-width: 1200px) {
     body{
 
         width: 100%;
