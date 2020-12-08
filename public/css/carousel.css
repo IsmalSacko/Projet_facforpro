@@ -6,6 +6,9 @@ body, html {
     padding-top: 0rem;
     padding-bottom: 0rem;
     color: #5a5a5a;
+    font-family: 'Times New Roman', Times, serif;
+
+
 }
 body .btn {
     border-radius: 20px;
@@ -21,8 +24,6 @@ body .btn {
     max-width: 120px;
     max-height: 120px;
     border-radius: 50%;
-
-
 }
 
 
