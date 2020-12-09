@@ -50,5 +50,10 @@ class HomeController extends AbstractController
      */
         public function dev_web(){
         return $this->render('home/dev_web.html.twig');
+    }/**
+     * @Route ("/demo", name="demo_index")
+     */
+        public function demo(){
+        return $this->render('home/demo.html.twig');
     }
 }
