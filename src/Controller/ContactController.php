@@ -45,11 +45,12 @@ class ContactController extends AbstractController
             $entityManager->persist($contact);
             $entityManager->flush();*/
             $email = new Email();
-            $email->from($contact->getEmail())
+           $email->from($contact->getEmail())
                   ->to('ismalsacko@yahoo.fr')
                   ->subject($contact->getMessage())
                   ->html('<p>'.$contact->getMessage().'</p>');
             $mailer->send($email);
+
             $this->addFlash("warning", "Votre message a bien éte envoyé ! Nous vous répondrons sous 24 heures !");
             return $this->redirectToRoute('home');
         }
