@@ -9,6 +9,7 @@ use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Mailer\MailerInterface;
+use Symfony\Component\Mime\Address;
 use Symfony\Component\Mime\Email;
 use Symfony\Component\Routing\Annotation\Route;
 
@@ -45,7 +46,7 @@ class ContactController extends AbstractController
             $entityManager->persist($contact);
             $entityManager->flush();*/
             $email = new Email();
-           $email->from($contact->getEmail())
+           $email->from(new Address($contact->getEmail()))
                   ->to('ismalsacko@yahoo.fr')
                   ->subject($contact->getMessage())
                   ->html('<p>'.$contact->getMessage().'</p>');
