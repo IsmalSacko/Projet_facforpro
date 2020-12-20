@@ -44,8 +44,6 @@ class AdType extends AbstractType
                     'placeholder' => 'Quantité(entier)'
                 ]
             ])
-            ->add('utilisateur')
-            // ->add('submit', SubmitType::class)
 
         ;
     }
