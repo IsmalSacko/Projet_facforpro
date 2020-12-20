@@ -68,20 +68,7 @@ class Aad
      */
     private $updated_at;
 
-    /**
-     * @ORM\OneToOne(targetEntity="App\Entity\Utilisateur", mappedBy="imageAd", cascade={"persist", "remove"})
-     */
-    private $utilisateur;
 
-    /**
-     * @ORM\ManyToMany(targetEntity="App\Entity\Utilisateur", inversedBy="aads")
-     */
-    private $image_id;
-
-    public function __construct()
-    {
-        $this->image_id = new ArrayCollection();
-    }
 
 
     public function getId(): ?int
@@ -191,48 +178,13 @@ class Aad
         return $this;
     }
 
-    public function getUtilisateur(): ?Utilisateur
-    {
-        return $this->utilisateur;
-    }
 
-    public function setUtilisateur(Utilisateur $utilisateur): self
-    {
-        $this->utilisateur = $utilisateur;
 
-        // set the owning side of the relation if necessary
-        if ($utilisateur->getImageAd() !== $this) {
-            $utilisateur->setImageAd($this);
-        }
 
-        return $this;
-    }
 
-    /**
-     * @return Collection|Utilisateur[]
-     */
-    public function getImageId(): Collection
-    {
-        return $this->image_id;
-    }
 
-    public function addImageId(Utilisateur $imageId): self
-    {
-        if (!$this->image_id->contains($imageId)) {
-            $this->image_id[] = $imageId;
-        }
 
-        return $this;
-    }
 
-    public function removeImageId(Utilisateur $imageId): self
-    {
-        if ($this->image_id->contains($imageId)) {
-            $this->image_id->removeElement($imageId);
-        }
-
-        return $this;
-    }
     public function __toString()
     {
         return strval($this->id);
