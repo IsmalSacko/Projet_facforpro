@@ -46,7 +46,7 @@ class ContactController extends AbstractController
             $entityManager->persist($contact);
             $entityManager->flush();
             $email = new Email();
-           $email->from(new Address($contact->getEmail()))
+           $email->from($contact->getEmail())
                   ->to('ismalsacko@yahoo.fr')
                   ->subject($contact->getMessage())
                   ->html('<p>'.$contact->getMessage().'</p>');
