@@ -42,9 +42,9 @@ class ContactController extends AbstractController
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            /*$entityManager = $this->getDoctrine()->getManager();
+            $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($contact);
-            $entityManager->flush();*/
+            $entityManager->flush();
             $email = new Email();
            $email->from(new Address($contact->getEmail()))
                   ->to('ismalsacko@yahoo.fr')
