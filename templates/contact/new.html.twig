@@ -11,7 +11,7 @@
         <h1 class="text-center">Nous conctacter !</h1>
 
       <div class="col-sm-8 col-md-6 col-lg-6 m-auto">
-          {{ include('contact/_form.html.twig') }}
+          {{ include('contact/_form.html.twig', {'button_label': 'Envoyer'}) }}
       </div>
 
         <a class="btn btn-success mb-2 mt-2" href="{{ path('home') }}">Retour à l'accueil</a>
