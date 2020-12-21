@@ -1,5 +1,3 @@
-
-
-$('.dropdown').hover(function(){
+/*$('.dropdown').hover(function(){
     $(".dropdown-toggle").dropdown("toggle");
-});
+});*/
